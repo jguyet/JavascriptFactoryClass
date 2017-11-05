@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="Factory.js"></script>
+  <script src="test/classtest.js"></script>
+  <meta charset="utf-8">
+  <title>Factory class Demo</title>
+</head>
+<body style="background-color:powderblue;">
+
+  <script>
+	var classtest = new test.Classtest();
+	console.log(classtest);
+	classtest.scale.x = 1;
+	console.log(classtest.scale);
+	
+	classtest.setScale({y: 100});
+	console.log(classtest.scale);
+	
+	console.log(classtest.getName2());
+	classtest.setName2("coucou");
+	console.log(classtest.getName2());
+	
+	classtest.destroy();
+	classtest = null;
+	if (!classtest)
+		console.log("classtest doesn't exist.");
+	
+  </script>
+</body>
+</html>
